@@ -1,0 +1,37 @@
+<LoginScreenView>
+    md_bg_color: app.theme_cls.backgroundColor
+
+    MDLabel:
+        text: 'Enter your Login details'
+        pos_hint: {'center_x': .5, 'center_y': .58}
+        halign: 'center'
+#        font_size: '28sp'
+
+    MDTextField:
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        size_hint_x: .8
+        MDTextFieldHintText:
+            text: 'Enter Email/Number'
+
+    MDTextField:
+        size_hint_x: .8
+        pos_hint: {'center_x': .5, 'center_y': .4}
+        MDTextFieldHintText:
+            text: 'Enter Password'
+
+
+    MDButton:
+        pos_hint: {'center_x': .5, 'center_y': .28}
+        theme_width:  'Custom'
+        size_hint_x: .8
+        radius: dp(6)
+        style: 'tonal'
+        MDButtonText:
+            text: 'Login'
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+    MDButton:
+        pos_hint: {'center_x': .75, 'center_y': .24}
+        style: 'text'
+        MDButtonText:
+            text: 'Forget Password'

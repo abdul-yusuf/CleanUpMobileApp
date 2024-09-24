@@ -1,0 +1,77 @@
+<SignUpScreenView>
+    md_bg_color: app.theme_cls.backgroundColor
+    MDScrollView:
+#        pos_hint: {'center_x': .5, 'center_y': .2}
+        size: root.width, root.height - dp(220)
+        MDBoxLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height + dp(180)
+            orientation: 'vertical'
+            spacing: dp(20)
+
+            MDLabel:
+#                adaptive_height: True
+#                size_hint_y: .8
+                text: 'Enter your Login details'
+                pos_hint: {'center_x': .5, 'center_y': .58}
+                halign: 'center'
+        #        font_size: '28sp'
+
+            MDBoxLayout:
+                adaptive_height: True
+                orientation: 'vertical'
+                spacing: dp(28)
+                MDTextField:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_x: .8
+                    MDTextFieldHintText:
+                        text: 'Enter Fullname'
+
+                MDTextField:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_x: .8
+                    MDTextFieldHintText:
+                        text: 'Enter Email'
+
+                MDTextField:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_x: .8
+                    MDTextFieldHintText:
+                        text: 'Enter Phone Number'
+
+                MDTextField:
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    size_hint_x: .8
+                    MDTextFieldHintText:
+                        text: 'Enter Password'
+
+                MDTextField:
+                    size_hint_x: .8
+                    pos_hint: {'center_x': .5, 'center_y': .4}
+                    MDTextFieldHintText:
+                        text: 'Enter Password'
+
+
+            MDButton:
+                pos_hint: {'center_x': .5, 'center_y': .28}
+                theme_width:  'Custom'
+                size_hint_x: .8
+                radius: dp(6)
+                style: 'filled'
+                MDButtonText:
+                    text: 'Login'
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+
+            MDBoxLayout:
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                size_hint_x: .8
+                MDLabel:
+                    text: 'By clicking you agree with our Terms and Condition'
+
+            MDButton:
+                pos_hint: {'center_x': .75, 'center_y': .24}
+                style: 'text'
+                MDButtonText:
+                    text: 'Have an Account?'
+
