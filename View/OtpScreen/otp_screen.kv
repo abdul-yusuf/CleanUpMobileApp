@@ -50,7 +50,7 @@
         size_hint_x: .8
         radius: dp(6)
         style: 'filled'
-        on_press: app.add_screen('home screen')
+        on_press: root.controller.verify_otp()
         MDButtonText:
             text: 'Verify'
             pos_hint: {'center_x': .5, 'center_y': .5}
@@ -58,5 +58,6 @@
     MDButton:
         pos_hint: {'center_x': .75, 'center_y': .34}
         style: 'text'
+        on_press: root.controller.resend_otp()
         MDButtonText:
             text: 'Resend OTP'

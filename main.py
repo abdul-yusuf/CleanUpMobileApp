@@ -10,33 +10,33 @@ DEBUG=1 python main.py
 
 # import importlib
 # import os
-#
+
 # from kivy import Config
-#
+
 # from PIL import ImageGrab
-#
+
 # # TODO: You may know an easier way to get the size of a computer display.
-#
+
 # resolution = ImageGrab.grab().size
-#
+
 # # Change the values of the application window size as you need.
 # # Config.set("graphics", "height", resolution[1])
 # # Config.set("graphics", "width", "200")
-#
-#
+
+
 # from kivy.core.window import Window
-#
+
 # # Place the application window on the right side of the computer screen.
 # Window.top = 0
 # Window.left = resolution[0] - Window.width
-#
+
 # from kivymd.tools.hotreload.app import MDApp
 # from kivymd.uix.screenmanager import MDScreenManager
-#
-#
+
+
 # class KWMAPP(MDApp):
 #     KV_DIRS = [os.path.join(os.getcwd(), "View")]
-#
+
 #     def build_app(self) -> MDScreenManager:
 #         """
 #         In this method, you don't need to change anything other than the
@@ -46,14 +46,14 @@ DEBUG=1 python main.py
 #         self.theme_cls.primary_palette = "Green"  # This is to set a general palette.
 #         self.theme_cls.primary_hue = "900"  # Use the hue as "500" for a mid-range green color.
 #         # self.theme_cls.primary_color = [0.41, 0.74, 0.24, 1]  # Set the primary color to #69BD3D (as RGBA)
-#
+
 #         import View.screens
-#
+
 #         self.manager_screens = MDScreenManager()
 #         Window.bind(on_key_down=self.on_keyboard_down)
 #         importlib.reload(View.screens)
 #         screens = View.screens.screens
-#
+
 #         for i, name_screen in enumerate(screens.keys()):
 #             model = screens[name_screen]["model"]()
 #             controller = screens[name_screen]["controller"](model)
@@ -61,21 +61,21 @@ DEBUG=1 python main.py
 #             view.manager_screens = self.manager_screens
 #             view.name = name_screen
 #             self.manager_screens.add_widget(view)
-#
+
 #         return self.manager_screens
-#
+
 #     def on_keyboard_down(self, window, keyboard, keycode, text, modifiers) -> None:
 #         """
 #         The method handles keyboard events.
-#
+
 #         By default, a forced restart of an application is tied to the
 #         `CTRL+R` key on Windows OS and `COMMAND+R` on Mac OS.
 #         """
-#
+
 #         if "meta" in modifiers or "ctrl" in modifiers and text == "r":
 #             self.rebuild()
-#
-#
+
+
 # KWMAPP().run()
 
 # After you finish the project, remove the above code and uncomment the below

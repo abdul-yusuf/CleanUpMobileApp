@@ -29,19 +29,24 @@ class OtpScreenController:
         self.dialog = self.view.app.dialog
         self.dialog.open()
         payload = {
-            'email': self.view.ids.email.text,
+            'email': self.model.email,
             'pin': self.view.ids.txt1.text + self.view.ids.txt2.text + self.view.ids.txt3.text + self.view.ids.txt4.text
         }
         print(payload)
         self.view.app.api().verify_phone_number(self, payload=payload)
 
     def resend_otp(self):
-        self.view.app.api().resend_otp(self, headers=self.view.app.get_headers())
+        self.dialog = self.view.app.dialog
+        self.dialog.open()
+        payload = {
+            'email': self.model.email
+        }
+        self.view.app.api().resend_otp(self, payload=payload)
 
 
     def on_success(self, *args, **kwargs):
         print('Success: ', args, kwargs)
-        self.model.notify_observers('otp screen')
+        self.view.next_screen()
         self.dialog.dismiss()
 
     def resend_success(self, *args, **kwargs):

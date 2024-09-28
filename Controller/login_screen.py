@@ -7,7 +7,7 @@ import View.LoginScreen.login_screen
 # If you no longer need a hot reload, you can delete this instruction.
 importlib.reload(View.LoginScreen.login_screen)
 
-
+from kivy.clock import Clock
 
 
 class LoginScreenController:
@@ -70,4 +70,9 @@ class LoginScreenController:
     def on_user_details_failure(self, *args, **kwargs):
         print('Failure: ', args, kwargs)
         self.view.app.add_screen('otp screen')
+        # def pass_attr(self, name_screen: str, data, attr=None)
+        Clock.schedule_once(lambda _:self.model.pass_attr('otp screen', self.view.ids.email.text, 'email'), 1)
+        # Clock.schedule_once(lambda _:self.model.pass_attr('otp screen', self.model.phone_last_two_digit, 'phone_last_two_digit'), 1)
+        Clock.schedule_once(lambda _:self.model.notify_observers('otp screen'), 2)
+
         self.dialog.dismiss()

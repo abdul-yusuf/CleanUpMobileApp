@@ -9,4 +9,7 @@ class OtpScreenView(BaseScreenView):
         according to these changes.
         """
         self.phone_last_two_digit = self.model.phone_last_two_digit
+
+    def next_screen(self):
+        self.app.add_screen('home screen')
         
