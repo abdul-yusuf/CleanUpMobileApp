@@ -1,0 +1,51 @@
+<LearningScreenView>
+    md_bg_color: app.theme_cls.backgroundColor
+    MDButton:
+        pos_hint: {'center_x': .9, 'top': .98}
+        style: 'text'
+        on_press: app.add_screen('login screen')
+        MDButtonText:
+            text: 'Skip'
+    MDLabel:
+        adaptive_height: True
+        pos_hint: {'center_x': .5, 'top': .96}
+        text: "Learn"
+        bold: True
+        halign: 'center'
+    MDButton:
+        pos_hint: {'center_x': .1, 'top': .98}
+        style: 'text'
+        on_press: app.nav.prev()
+        MDButtonIcon:
+            icon: 'arrow-left'
+
+    MDLabel:
+        adaptive_height: True
+        pos_hint: {'center_x': .5, 'top': .86}
+        text: "Why Recycling"
+        bold: True
+        halign: 'center'
+
+    MDScrollView:
+        pos_hint: {'center_x': .5, 'top': .82}
+        size: root.width, root.height - dp(20)
+        MDGridLayout:
+            cols: 1
+            spacing: dp(25)
+            padding: [dp(10), dp(10), dp(10), dp(550)]
+            size_hint_y: None
+            height: self.minimum_height + dp(480)        
+            CCard:
+
+<CCard@MDCard>
+    adaptive_height: True
+    MDBoxLayout:
+        adaptive_height: True
+        Image:
+            adaptive_height: True
+            size_hint: .4, .4
+            source: "assets/images/Frame 81.png"
+            allow_stretch:
+        MDLabel:
+            text: "Social and Health Benefits of Recycling"
+            color:

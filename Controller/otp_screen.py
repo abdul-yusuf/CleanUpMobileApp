@@ -41,10 +41,13 @@ class OtpScreenController:
 
     def on_success(self, *args, **kwargs):
         print('Success: ', args, kwargs)
-        self.view.app.store_token(args[1]['token'])
-        print(self.view.app.get_headers())
-        self.model.notify_observers('signup screen')
-        # self.dialog.dismiss()
+        self.model.notify_observers('otp screen')
+        self.dialog.dismiss()
+
+    def resend_success(self, *args, **kwargs):
+        print('Success: ', args, kwargs)
+        self.dialog.dismiss()
+        self.view.app.snackbar_notification(f"OTP send successfully")
 
     def on_user_details(self, *args, **kwargs):
         print('Success: ', args, kwargs)

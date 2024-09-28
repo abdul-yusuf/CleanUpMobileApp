@@ -114,7 +114,7 @@ class API:
             req_body=dumps(payload),
             method=method,
             req_headers=headers,
-            on_success=init_func.on_success if on_success_method is None else on_success_method,
+            on_success=init_func.resend_success if on_success_method is None else on_success_method,
             on_error=init_func.on_error if on_error_method is None else on_error_method,
             on_failure=init_func.on_failure if on_failure_method is None else on_failure_method,
             ca_file=cfi.where(),
