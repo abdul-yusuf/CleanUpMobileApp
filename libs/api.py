@@ -13,8 +13,8 @@ from kivy.storage.jsonstore import JsonStore
 
 
 class API:
-    BASE_URL = 'http://127.0.0.1:8000/'
-    # BASE_URL = 'https://cleanupbackend-production.up.railway.app/'
+    # BASE_URL = 'http://127.0.0.1:8000/'
+    BASE_URL = 'https://cleanupbackend-production.up.railway.app/'
     def signup(self, 
                 init_func,
                 on_success_method=None,
