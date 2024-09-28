@@ -8,3 +8,5 @@ class OtpScreenView(BaseScreenView):
         The view in this method tracks these changes and updates the UI
         according to these changes.
         """
+        self.phone_last_two_digit = self.model.phone_last_two_digit
+        

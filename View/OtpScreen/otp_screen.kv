@@ -1,6 +1,6 @@
 <OtpScreenView>
     md_bg_color: app.theme_cls.backgroundColor
-    phone_last_two_digit: 82
+    phone_last_two_digit: '82'
     MDLabel:
         markup: True
         text: f'Enter the verification code \n we send to +234*******{root.phone_last_two_digit}'
@@ -50,6 +50,7 @@
         size_hint_x: .8
         radius: dp(6)
         style: 'filled'
+        on_press: app.add_screen('home screen')
         MDButtonText:
             text: 'Verify'
             pos_hint: {'center_x': .5, 'center_y': .5}

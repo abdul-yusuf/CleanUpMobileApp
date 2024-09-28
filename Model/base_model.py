@@ -60,10 +60,11 @@ class BaseScreenModel:
         """
         args:
             name_screen: str
-            data: (list, dict)
+            data: (str, list, dict)
         """
         for observer in self._observers:
             if observer.name == name_screen:
+                print(attr, data)
                 if attr:
                     try:
                         exec(f'observer.model.{attr} = data')

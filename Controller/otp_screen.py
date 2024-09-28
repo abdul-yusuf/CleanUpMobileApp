@@ -25,20 +25,15 @@ class OtpScreenController:
     def get_view(self) -> View.OtpScreen.otp_screen:
         return self.view
     
-    def signup(self):
-        if self.view.ids.password.text == self.view.ids.password2.text:  
-            self.dialog = self.view.app.dialog
-            self.dialog.open()
-            payload = {
-                'email': self.view.ids.email.text,
-                'full_name': self.view.ids.full_name.text,
-                'phone_number': self.view.ids.phone_number.text,
-                'password': self.view.ids.password.text
-            }
-            print(payload)
-            self.view.app.api().signup(self, payload=payload)
-        else:
-            self.view.app.snackbar_notification("Password didn't match")
+    def verify_otp(self):
+        self.dialog = self.view.app.dialog
+        self.dialog.open()
+        payload = {
+            'email': self.view.ids.email.text,
+            'pin': self.view.ids.txt1.text + self.view.ids.txt2.text + self.view.ids.txt3.text + self.view.ids.txt4.text
+        }
+        print(payload)
+        self.view.app.api().verify_phone_number(self, payload=payload)
 
     def resend_otp(self):
         self.view.app.api().resend_otp(self, headers=self.view.app.get_headers())

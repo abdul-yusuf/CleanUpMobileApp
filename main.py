@@ -193,7 +193,7 @@ class KWMAPP(MDApp):
         )
         Clock.schedule_once(lambda _: self.dialog.add_widget(spinner), 0)
         # Clock.schedule_once(lambda _: self.add_screen('track order screen', first=True), 0)
-        Clock.schedule_once(lambda _: self.add_screen('otp screen', first=True), 0)
+        Clock.schedule_once(lambda _: self.add_screen('onboarding screen', first=True), 0)
         # self.add_screen('onboarding screen', first=True)
         Window.bind(on_key_down=self.on_keyboard_down)
 

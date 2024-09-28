@@ -48,8 +48,10 @@ class SignUpScreenController:
         print('Success: ', args, kwargs)
         self.view.app.store_token(args[1]['token'])
         print(self.view.app.get_headers())
-        self.model.notify_observers('signup screen')
-        # self.dialog.dismiss()
+        self.model.phone_last_two_digit = args[1]['user']['phone_number'][-2:]
+        # self.model.email = args[1]['user']['email']
+        self.model.notify_observers('sign up screen')
+        self.dialog.dismiss()
 
     def on_user_details(self, *args, **kwargs):
         print('Success: ', args, kwargs)
