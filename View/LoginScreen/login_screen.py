@@ -8,3 +8,7 @@ class LoginScreenView(BaseScreenView):
         The view in this method tracks these changes and updates the UI
         according to these changes.
         """
+        self.controller.get_user_details()
+
+    def user_is_changed(self):
+        self.app.add_screen('home screen')

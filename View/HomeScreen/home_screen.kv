@@ -1,1 +1,978 @@
 <HomeScreenView>
+    md_bg_color: app.theme_cls.backgroundColor
+    user_name: 'Abdul Musa'
+    MDScreenManager:
+        id: home_screen_manager
+        MDScreen:
+            name: 'home'
+            MDScrollView:
+                size: root.width, root.height - dp(20)
+                MDGridLayout:
+                    cols: 1
+                    spacing: dp(25)
+                    padding: [dp(10), dp(10), dp(10), dp(550)]
+                    size_hint_y: None
+                    height: self.minimum_height + dp(480)
+                    MDBoxLayout:
+                        pos_hint: {'center_x': .5, 'top': .97}
+                        adaptive_height: True
+                        padding: dp(10)
+                        MDLabel:
+                            adaptive_height: True
+                            text: f'Hello, {root.user_name}'
+
+                        Image:
+                #            adaptive_width: True
+                            size_hint: .15, 1
+                            source:'assets/images/MYDP.png'
+
+                        MDIcon:
+                #            adaptive_width: True
+                            icon: 'bell-outline'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        AsyncImage:
+                            size_hint: None, None
+                            size: root.width - dp(20), dp(125)
+        #                    size_hint_y: 1
+                            source:'assets/images/Frame 38.png'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: 'Most Recycled Items'
+                        MDScrollView:
+        #                    scroll_y: False
+        #                    scroll_x: True
+                            size_hint_y: None
+                            height: dp(100)
+                            MDGridLayout:
+                                rows: 1
+                                size_hint_x: None
+        #                        adaptive_width: False
+                                width: self.minimum_width + dp(380)
+                                spacing: dp(10)
+                                padding: [dp(10), dp(10), dp(40), dp(10)]
+                                MDCard:
+                                    style: 'outlined'
+                                    size_hint: root.width/3, None
+                                    orientation: 'vertical'
+                                    size_hint_y: None
+                                    height: dp(80)
+                                    Image:
+        #                                size_hint: 1, 1
+                                        source:'assets/images/bin1.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        text: 'Paper Waste'
+                                        theme_font_size: 'Custom'
+                                        font_size: '10sp'
+                                        halign: 'center'
+                                MDCard:
+                                    style: 'outlined'
+                                    size_hint: root.width/3, None
+                                    orientation: 'vertical'
+                                    size_hint_y: None
+                                    height: dp(80)
+                                    Image:
+        #                                size_hint: 1, 1
+                                        source:'assets/images/bin1.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        text: 'Paper Waste'
+                                        theme_font_size: 'Custom'
+                                        font_size: '10sp'
+                                        halign: 'center'
+                                MDCard:
+                                    style: 'outlined'
+                                    size_hint: root.width/3, None
+                                    orientation: 'vertical'
+                                    size_hint_y: None
+                                    height: dp(80)
+                                    Image:
+        #                                size_hint: 1, 1
+                                        source:'assets/images/bin1.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        text: 'Paper Waste'
+                                        theme_font_size: 'Custom'
+                                        font_size: '10sp'
+                                        halign: 'center'
+                                MDCard:
+                                    style: 'outlined'
+                                    size_hint: root.width/3, None
+                                    orientation: 'vertical'
+                                    size_hint_y: None
+                                    height: dp(80)
+                                    Image:
+        #                                size_hint: 1, 1
+                                        source:'assets/images/bin1.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        text: 'Paper Waste'
+                                        theme_font_size: 'Custom'
+                                        font_size: '10sp'
+                                        halign: 'center'
+                                MDCard:
+                                    style: 'outlined'
+                                    size_hint: root.width/3, None
+                                    orientation: 'vertical'
+                                    size_hint_y: None
+                                    height: dp(80)                                    
+                                    Image:
+        #                                size_hint: 1, 1
+                                        source:'assets/images/bin1.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        text: 'Paper Waste'
+                                        theme_font_size: 'Custom'
+                                        font_size: '10sp'
+                                        halign: 'center'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        orientation: 'vertical'
+                        MDBoxLayout:
+                            MDLabel:
+                                adaptive_width: True
+                                text: 'Recent Connected Vendors'
+                            Widget:
+                            MDButton:
+                                style: 'text'
+                                MDButtonText:
+                                    text: 'See more'
+
+                        MDGridLayout:
+                            cols: 2
+                            spacing: dp(10)
+                            padding: dp(10)
+
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    padding: dp(5)
+                                    spacing: dp(5)
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/bin2.png'
+                                    MDLabel:
+                                        adaptive_height: True
+                                        markup: True
+                                        text: '[b]Yaseer Alaramma[/b]\n2:00pm, 30th May 2024\n20kg: Paper waste\n₦2,500'
+                                        theme_font_size: 'Custom'
+                                        font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                    text: 'No 5 Camp Road U/Rimi Kaduna'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Contact Details >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+
+##*******************************************************************************************
+        MDScreen:
+            name: 'market_place'
+            MDBoxLayout:
+                pos_hint: {'center_x': .5, 'top': .97}
+                adaptive_height: True
+                padding: dp(10)
+                MDLabel:
+                    adaptive_height: True
+                    text: f'Vendor'
+                    halign: 'center'
+                    bold: True
+                MDIcon:
+        #            adaptive_width: True
+                    icon: 'bell-outline'
+
+            MDBoxLayout:
+                pos_hint: {'center_y': .65}
+                adaptive_height: True
+                padding: dp(15)
+                spacing: dp(10)
+                orientation: 'vertical'
+                MDLabel:
+                    adaptive_height: True
+                    text: "Let's Connect you to the local vendors around you"
+                    halign: 'center'
+                    theme_font_size: 'Custom'
+                    font_size: '18sp'
+                    bold: True
+
+                MDCard:
+                    adaptive_height: True
+                    orientation: 'vertical'
+                    padding: [dp(10), dp(20)]
+                    spacing: dp(10)
+                    MDLabel:
+                        adaptive_height: True
+                        text: 'Search for a Vendor'
+                        halign: 'center'
+                        bold: True
+                    MDTextField:
+                        MDTextFieldLeadingIcon:
+                            icon: "recycle"
+                        MDTextFieldHintText:
+                            text: 'Input type of waste'
+                    MDTextField:
+                        MDTextFieldLeadingIcon:
+                            icon: "recycle"
+                        MDTextFieldHintText:
+                            text: 'Input weight in kg'
+                    MDTextField:
+                        MDTextFieldLeadingIcon:
+                            icon: "map-marker-radius-outline"
+                        MDTextFieldHintText:
+                            text: 'Input Location'
+                    MDButton:
+                        theme_width: 'Custom'
+                        size_hint_x: .8
+                        radius: dp(6)
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        theme_bg_color: "Custom"
+                        md_bg_color: "#0C222F"
+                        MDButtonText:
+                            theme_text_color: "Custom"
+                            text_color: "white"
+                            pos_hint: {'center_x': .5, 'center_y': .5}
+                            text: 'Search Vendor'
+##*******************************************************************************************
+
+        MDScreen:
+            name: 'scan_waste'
+            MDBoxLayout:
+                pos_hint: {'center_x': .5, 'top': .97}
+                adaptive_height: True
+                padding: dp(10)
+ #               MDIcon:
+        #            adaptive_width: True
+  #                  icon: 'arrow-left'
+                MDLabel:
+                    adaptive_height: True
+                    text: f'AI Assistant'
+                    halign: 'center'
+                    bold: True
+            MDBoxLayout:
+                padding: dp(15)
+                MDLabel:
+                    markup: True
+                    text: "Couldn't understand which waste can be recycled?\n \n \nLet's helpyou analyse the type of waste you have simply by scanning or uploading a Image of the waste."
+                    halign: 'center'
+
+            MDBoxLayout:
+                adaptive_height: True
+                padding: [dp(20), dp(10)]
+                # spacing: self.width/10 - dp(5)
+                pos_hint: {'center_x': .5, 'center_y': .3}
+                MDButton:
+                    radius: dp(6)
+                    theme_bg_color: "Custom"
+                    md_bg_color: "#0C222F"
+                    MDButtonText:
+                        theme_text_color: "Custom"
+                        text_color: "white"
+                        text: 'Scan waste'
+                    MDButtonIcon:
+                        theme_text_color: "Custom"
+                        text_color: "white"
+                        icon: 'line-scan'
+                Widget:
+                MDButton:
+                    radius: dp(6)
+                    style: 'filled'
+                    MDButtonText:
+                        text: 'Scan waste'
+                    MDButtonIcon:
+                        icon: 'paperclip'
+
+##*******************************************************************************************
+        MDScreen:
+            name: 'learn'
+            MDScrollView:
+                size: root.width, root.height - dp(20)
+                MDGridLayout:
+                    cols: 1
+                    spacing: dp(25)
+                    padding: [dp(10), dp(10), dp(10), dp(550)]
+                    size_hint_y: None
+                    height: self.minimum_height + dp(480)
+                    MDBoxLayout:
+                        pos_hint: {'center_x': .5, 'top': .97}
+                        adaptive_height: True
+                        padding: dp(10)
+                        MDLabel:
+                            adaptive_height: True
+                            text: f'Learn'
+                            halign: 'center'
+                            bold: True
+
+                        MDIcon:
+                #            adaptive_width: True
+                            icon: 'bell-outline'
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: dp(20)
+                        orientation: 'vertical'
+                        MDLabel:
+                            adaptive_height: True
+                            text: 'Learn more about Environmental Managemnet and how to earn Money by taking your waste for recycling'
+                            halign: 'center'
+                        MDTextField:
+                            MDTextFieldLeadingIcon:
+                                icon: 'magnify'
+                            MDTextFieldHintText:
+                                text: 'Search Topic'
+                    MDBoxLayout:
+                        adaptive_height: True
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: 'In Progress'
+                        MDScrollView:
+        #                    scroll_y: False
+        #                    scroll_x: True
+                            size_hint_y: None
+                            height: dp(150)
+                            MDGridLayout:
+                                rows: 1
+                                size_hint_x: None
+        #                        adaptive_width: False
+                                width: self.minimum_width + dp(380)
+                                spacing: dp(10)
+                                padding: [dp(10), dp(20)]
+                                AsyncImage:
+                                    size_hint: None, None
+                                    size: root.width - dp(100), dp(125)
+                #                    size_hint_y: 1
+                                    source:'assets/images/Frame 62.png'
+                                AsyncImage:
+                                    size_hint: None, None
+                                    size: root.width - dp(100), dp(125)
+                #                    size_hint_y: 1
+                                    source:'assets/images/Frame 62.png'
+                                AsyncImage:
+                                    size_hint: None, None
+                                    size: root.width - dp(100), dp(125)
+                #                    size_hint_y: 1
+                                    source:'assets/images/Frame 62.png'
+                    MDBoxLayout:
+                        adaptive_height: True
+                        orientation: 'vertical'
+                        MDBoxLayout:
+                            MDLabel:
+                                text: 'Popular Topics'
+                            Widget:
+                            MDButton:
+                                style: 'text'
+                                MDButtonText:
+                                    text: 'See more'
+
+                        MDGridLayout:
+                            cols: 2
+                            spacing: dp(10)
+                            padding: dp(10)
+
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/IMG_37.png'
+                                MDLabel:
+                                    adaptive_height: True
+                                    markup: True
+                                    text: '[b]Why Recycling[/b]\n12 minutes read \n30minutes Video'
+                                    halign: 'center'
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Get Started >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/IMG_37.png'
+                                MDLabel:
+                                    adaptive_height: True
+                                    markup: True
+                                    text: '[b]Why Recycling[/b]\n12 minutes read \n30minutes Video'
+                                    halign: 'center'
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Get Started >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/IMG_37.png'
+                                MDLabel:
+                                    adaptive_height: True
+                                    markup: True
+                                    text: '[b]Why Recycling[/b]\n12 minutes read \n30minutes Video'
+                                    halign: 'center'
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Get Started >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/IMG_37.png'
+                                MDLabel:
+                                    adaptive_height: True
+                                    markup: True
+                                    text: '[b]Why Recycling[/b]\n12 minutes read \n30minutes Video'
+                                    halign: 'center'
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Get Started >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+                            MDCard:
+                                style: 'outlined'
+                                orientation: 'vertical'
+                                adaptive_height: True
+                                padding: dp(10)
+                                MDBoxLayout:
+                                    adaptive_height: True
+                                    Image:
+                                        source:'assets/images/IMG_37.png'
+                                MDLabel:
+                                    adaptive_height: True
+                                    markup: True
+                                    text: '[b]Why Recycling[/b]\n12 minutes read \n30minutes Video'
+                                    halign: 'center'
+                                    theme_font_size: 'Custom'
+                                    font_size: '8sp'
+                                MDLabel:
+                                    adaptive_height: True
+                                    text: 'Get Started >>'
+                                    theme_text_color: 'Custom'
+                                    color: 'green'
+                                    theme_font_size: 'Custom'
+                                    font_size: '12sp'
+                                    halign: "center"
+#*******************************************************************************************
+    BottomNav:
+        screen_manager: home_screen_manager
+<BottomNav>:
+    theme_bg_color: 'Custom'
+    md_bg_color: "#0C222F"
+    pos_hint: {'center_x': .5, 'top': .09}
+    size_hint: 1, None
+    height: dp(65)
+    radius: dp(4)
+    padding: [dp(20),dp(5),dp(10),dp(20)]
+    selected: btn1
+#    screen_manager:
+#        spacing: root.width/3 - dp(45)
+    MDRelativeLayout:
+        MDBoxLayout:
+            adaptive_size: True
+            orientation: 'vertical'
+            pos_hint: {'center_x': .08}
+            MDButton:
+                id: btn1
+                theme_width: 'Custom'
+#                theme_bg_color
+                width: dp(55)
+                style: 'text'
+                on_press:
+                    root.switch(self, 'home')
+                MDButtonIcon:
+                    theme_text_color: 'Custom'
+                    text_color: 'white'
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    icon: 'home-outline'
+            MDLabel:
+                text: 'Home'
+                theme_font_size: 'Custom'
+                font_size: '8sp'
+                halign: 'center'
+                theme_text_color: 'Custom'
+                text_color: 'white'
+
+        MDBoxLayout:
+            adaptive_size: True
+            orientation: 'vertical'
+            pos_hint: {'center_x': .28}
+            MDButton:
+                theme_width: 'Custom'
+                width: dp(55)
+                style: 'text'
+                on_press:
+                    root.switch(self, 'learn')
+                MDButtonIcon:
+                    id: icon
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    icon: 'book-open-blank-variant-outline'
+                    theme_text_color: 'Custom'
+                    text_color: 'white'
+            MDLabel:
+                text: 'Learn'
+                theme_font_size: 'Custom'
+                font_size: '8sp'
+                halign: 'center'
+                theme_text_color: 'Custom'
+                text_color: 'white'
+        MDBoxLayout:
+            adaptive_size: True
+            orientation: 'vertical'
+            pos_hint: {'center_x': .5}
+            MDButton:
+                theme_width: 'Custom'
+                width: dp(55)
+                selected: True
+                style: 'text'
+                on_press:
+                    root.switch(self, 'scan_waste')
+                    icon.text_color='green' if icon.text_color=='white' else 'white'
+                MDButtonIcon:
+                    id: icon
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    icon: 'scan-helper'
+                    theme_text_color: 'Custom'
+                    text_color: 'white'
+            MDLabel:
+                text: 'Scan waste'
+                theme_font_size: 'Custom'
+                font_size: '8sp'
+                halign: 'center'
+                theme_text_color: 'Custom'
+                text_color: 'white'
+
+        MDBoxLayout:
+            adaptive_size: True
+            orientation: 'vertical'
+            pos_hint: {'center_x': .73}
+            MDButton:
+                theme_width: 'Custom'
+                width: dp(55)
+                selected: True
+                style: 'text'
+                on_press:
+                    root.switch(self, 'market_place')
+                MDButtonIcon:
+                    id: icon
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    icon: 'earth'
+                    theme_text_color: 'Custom'
+                    text_color: 'white'
+            MDLabel:
+                text: 'Market place'
+                theme_font_size: 'Custom'
+                font_size: '8sp'
+                halign: 'center'
+                theme_text_color: 'Custom'
+                text_color: 'white'
+
+        MDBoxLayout:
+            adaptive_size: True
+            orientation: 'vertical'
+            pos_hint: {'center_x': .92}
+            MDButton:
+                theme_width: 'Custom'
+                width: dp(55)
+                selected: True
+                style: 'text'
+                on_press:
+#                    root.switch(self, 'profile')
+                MDButtonIcon:
+                    id: icon
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    icon: 'account-outline'
+                    theme_text_color: 'Custom'
+                    text_color: 'white'
+            MDLabel:
+                text: 'Profile'
+                theme_font_size: 'Custom'
+                font_size: '8sp'
+                halign: 'center'
+                theme_text_color: 'Custom'
+                text_color: 'white'

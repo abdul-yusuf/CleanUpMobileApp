@@ -31,3 +31,57 @@ class BaseScreenModel:
             if observer.name == name_screen:
                 observer.model_is_changed()
                 break
+    
+    def notify_user_observers(self, name_screen: str) -> None:
+        """
+        Method that will be called by the observer when the model data changes.
+
+        :param name_screen:
+            name of the view for which the method should be called
+            :meth:`user_is_changed`.
+        """
+
+        for observer in self._observers:
+            if observer.name == name_screen:
+                observer.user_is_changed()
+                break
+    
+    def custom_notify_observers(self, name_screen: str, method) -> None:
+
+        for observer in self._observers:
+            if observer.name == name_screen:
+                try:
+                    exec(f"observer.{method}()")
+                except Exception as e:
+                    print(e)
+                break
+
+    def pass_attr(self, name_screen: str, data, attr=None):
+        """
+        args:
+            name_screen: str
+            data: (list, dict)
+        """
+        for observer in self._observers:
+            if observer.name == name_screen:
+                if attr:
+                    try:
+                        exec(f'observer.model.{attr} = data')
+                    except TypeError as e:
+                        print(e)
+                        eval(f'observer.model.{attr} = data')
+                else:
+                    observer.model.data = data
+                break
+
+    def append_attr(self, name_screen: str, data):
+        """
+        args:
+            name_screen: str
+            data: (str, list, dict)
+        """
+        for observer in self._observers:
+            if observer.name == name_screen:
+                observer.model.data = data.append(data)
+                break
+    

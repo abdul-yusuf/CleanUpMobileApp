@@ -3,12 +3,14 @@
     MDButton:
         pos_hint: {'center_x': .9, 'top': .98}
         style: 'text'
+        on_press: app.add_screen('login screen')
         MDButtonText:
             text: 'Skip'
 
     MDButton:
         pos_hint: {'center_x': .1, 'top': .98}
         style: 'text'
+        on_press: app.nav.prev()
         MDButtonIcon:
             icon: 'arrow-left'
 
@@ -29,6 +31,7 @@
         size_hint_x: .8
         radius: dp(6)
         style: 'filled'
+        on_press: app.add_screen('sign up screen')
         MDButtonText:
             text: 'Get started'
             pos_hint: {'center_x': .5, 'center_y': .5}
@@ -43,6 +46,7 @@
 
         MDButton:
             style: 'text'
+            on_press: app.add_screen('login screen')
             MDButtonText:
                 text: 'Login'
                 pos_hint: {'center_x': .5, 'center_y': .24}

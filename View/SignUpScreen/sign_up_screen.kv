@@ -23,30 +23,37 @@
                 orientation: 'vertical'
                 spacing: dp(28)
                 MDTextField:
+                    id: full_name
                     pos_hint: {'center_x': .5, 'center_y': .5}
                     size_hint_x: .8
                     MDTextFieldHintText:
                         text: 'Enter Fullname'
 
                 MDTextField:
+                    id: email
                     pos_hint: {'center_x': .5, 'center_y': .5}
                     size_hint_x: .8
                     MDTextFieldHintText:
                         text: 'Enter Email'
 
                 MDTextField:
+                    id: phone_number
                     pos_hint: {'center_x': .5, 'center_y': .5}
                     size_hint_x: .8
+                    input_type: 'number'
+                    max: 11
                     MDTextFieldHintText:
                         text: 'Enter Phone Number'
 
                 MDTextField:
+                    id: password
                     pos_hint: {'center_x': .5, 'center_y': .5}
                     size_hint_x: .8
                     MDTextFieldHintText:
                         text: 'Enter Password'
 
                 MDTextField:
+                    id: password2
                     size_hint_x: .8
                     pos_hint: {'center_x': .5, 'center_y': .4}
                     MDTextFieldHintText:
@@ -59,8 +66,9 @@
                 size_hint_x: .8
                 radius: dp(6)
                 style: 'filled'
+                on_press: root.controller.signup()
                 MDButtonText:
-                    text: 'Login'
+                    text: 'Signup'
                     pos_hint: {'center_x': .5, 'center_y': .5}
 
             MDBoxLayout:
@@ -72,6 +80,7 @@
             MDButton:
                 pos_hint: {'center_x': .75, 'center_y': .24}
                 style: 'text'
+                on_press: app.add_screen('login screen')
                 MDButtonText:
                     text: 'Have an Account?'
 

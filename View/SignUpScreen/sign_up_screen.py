@@ -8,3 +8,7 @@ class SignUpScreenView(BaseScreenView):
         The view in this method tracks these changes and updates the UI
         according to these changes.
         """
+        self.app.add_screen('otp screen')
+
+    def user_is_changed(self):
+        self.app.add_screen('otp screen')

@@ -22,17 +22,41 @@ screens = {
     'home screen': {
         'model': HomeScreenModel,
         'controller': HomeScreenController,
-    },
-    'login screen': {
-        'model': LoginScreenModel,
-        'controller': LoginScreenController,
-    },
-    'onboarding screen': {
-        'model': OnboardingScreenModel,
-        'controller': OnboardingScreenController,
+        'kv': 'View/HomeScreen/home_screen.kv'
     },
     'otp screen': {
         'model': OtpScreenModel,
         'controller': OtpScreenController,
+        'kv': 'View/OtpScreen/otp_screen.kv'
+    },
+    'sign up screen': {
+        'model': SignUpScreenModel,
+        'controller': SignUpScreenController,
+        'kv': 'View/SignUpScreen/sign_up_screen.kv'
+    },
+    'password rest screen': {
+        'model': PasswordResetScreenModel,
+        'controller': PasswordResetScreenController,
+        'kv': 'View/PasswordResetScreen/password_rest_screen.kv'
+    },
+    'login screen': {
+        'model': LoginScreenModel,
+        'controller': LoginScreenController,
+        'kv': 'View/LoginScreen/login_screen.kv'
+    },
+    'onboarding screen': {
+        'model': OnboardingScreenModel,
+        'controller': OnboardingScreenController,
+        'kv': 'View/OnboardingScreen/onboarding_screen.kv'
+    },
+    'second onboarding screen': {
+        'model': SecondOnboardingScreenModel,
+        'controller': SecondOnboardingScreenController,
+        'kv': 'View/SecondOnboardingScreen/second_onboarding_screen.kv'
+    },
+    'third onboarding screen': {
+        'model': ThirdOnboardingScreenModel,
+        'controller': ThirdOnboardingScreenController,
+        'kv': 'View/ThirdOnboardingScreen/third_onboarding_screen.kv'
     },
 }
