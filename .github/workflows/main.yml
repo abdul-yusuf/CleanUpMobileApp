@@ -1,7 +1,7 @@
 name: APK build
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
