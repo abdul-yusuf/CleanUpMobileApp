@@ -9,5 +9,5 @@
 <P>TOOLS:</P>
 <UL>
   <LI>Kivy</LI>
-  <li>KivyMD</li>
+  <li>KivyMD.</li>
 </UL>
